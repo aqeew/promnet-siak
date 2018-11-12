@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2018 at 02:53 AM
+-- Generation Time: Nov 12, 2018 at 05:51 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
@@ -64,8 +64,43 @@ CREATE TABLE `dosen` (
 --
 
 INSERT INTO `dosen` (`nip`, `nama`, `telp`, `alamat`) VALUES
-('1604401', 'Jokowi', '085888777666', 'Karawang'),
-('1606036', 'Rifqi Tryananda Rulliandi', '0857979797979', 'Majalengka');
+('199', 'Dayud', '46854684', 'Wakanda');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mahasiswa`
+--
+
+CREATE TABLE `mahasiswa` (
+  `nim` varchar(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `angkatan` varchar(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `matkul`
+--
+
+CREATE TABLE `matkul` (
+  `id_matkul` varchar(5) NOT NULL,
+  `nama_matkul` varchar(50) NOT NULL,
+  `sks` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prodi`
+--
+
+CREATE TABLE `prodi` (
+  `id_prodi` varchar(5) NOT NULL,
+  `nama_prodi` varchar(50) NOT NULL,
+  `akreditasi` varchar(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -76,6 +111,30 @@ INSERT INTO `dosen` (`nip`, `nama`, `telp`, `alamat`) VALUES
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id_username`);
+
+--
+-- Indexes for table `dosen`
+--
+ALTER TABLE `dosen`
+  ADD PRIMARY KEY (`nip`);
+
+--
+-- Indexes for table `mahasiswa`
+--
+ALTER TABLE `mahasiswa`
+  ADD PRIMARY KEY (`nim`);
+
+--
+-- Indexes for table `matkul`
+--
+ALTER TABLE `matkul`
+  ADD PRIMARY KEY (`id_matkul`);
+
+--
+-- Indexes for table `prodi`
+--
+ALTER TABLE `prodi`
+  ADD PRIMARY KEY (`id_prodi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
