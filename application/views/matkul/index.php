@@ -1,27 +1,25 @@
-            <!-- Dosen -->  
+            <!-- Mata Kuliah -->  
             <div class="content" style="padding-top: 70px; padding-left: 100px;">
                 <div class="container">
                     <div class="table-wrapper">
 
-            <h1>Data Dosen</h1>
+            <h1>Data Mata Kuliah</h1>
             <hr>
 
             <table id="tablenya" border="1" cellpadding="7">
                 <tr>
-                    <th>NIP</th>
-                    <th>Nama</th>
-                    <th>Telepon</th>
-                    <th>Alamat</th>
+                    <th>ID Matkul</th>
+                    <th>Nama Matkul</th>
+                    <th>SKS</th>
                 </tr>
 
                 <?php
-                if( ! empty($dosen)){
-                    foreach($dosen as $datadosen){
+                if( ! empty($matkul)){
+                    foreach($matkul as $datamatkul){
                         echo "<tr>
-                        <td>".$datadosen->nip."</td>
-                        <td>".$datadosen->nama."</td>
-                        <td>".$datadosen->telp."</td>
-                        <td>".$datadosen->alamat."</td>
+                        <td>".$datamatkul->id_matkul."</td>
+                        <td>".$datamatkul->nama_matkul."</td>
+                        <td>".$datamatkul->sks."</td>
                         </tr>";
                     }
                 }else{ 

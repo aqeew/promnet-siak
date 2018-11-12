@@ -1,30 +1,28 @@
-            <!-- Dosen -->  
+            <!-- Mahasiswa -->  
             <div class="content" style="padding-top: 70px; padding-left: 100px;">
                 <div class="container">
                     <div class="table-wrapper">
 
-            <h1>Data Dosen</h1>
+            <h1>Data Mahasiswa</h1>
             <hr>
 
             <table id="tablenya" border="1" cellpadding="7">
                 <tr>
-                    <th>NIP</th>
+                    <th>NIM</th>
                     <th>Nama</th>
-                    <th>Telepon</th>
-                    <th>Alamat</th>
+                    <th>Angkatan</th>
                     <th colspan="2">Aksi</th>
                 </tr>
 
                 <?php
-                if( ! empty($dosen)){
-                    foreach($dosen as $datadosen){
+                if( ! empty($mahasiswa)){
+                    foreach($mahasiswa as $datamahasiswa){
                         echo "<tr>
-                        <td>".$datadosen->nip."</td>
-                        <td>".$datadosen->nama."</td>
-                        <td>".$datadosen->telp."</td>
-                        <td>".$datadosen->alamat."</td>
-                        <td><a href='".base_url("c_dosen/ubah/".$datadosen->nip)."'>Ubah</a></td>
-                        <td><a href='".base_url("c_dosen/hapus/".$datadosen->nip)."'>Hapus</a></td>
+                        <td>".$datamahasiswa->nim."</td>
+                        <td>".$datamahasiswa->nama."</td>
+                        <td>".$datamahasiswa->angkatan."</td>
+                        <td><a href='".base_url("c_mahasiswa/ubah/".$datamahasiswa->nim)."'>Ubah</a></td>
+                        <td><a href='".base_url("c_mahasiswa/hapus/".$datamahasiswa->nim)."'>Hapus</a></td>
                         </tr>";
                     }
                 }else{ 

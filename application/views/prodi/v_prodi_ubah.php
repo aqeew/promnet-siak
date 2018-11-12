@@ -1,9 +1,9 @@
-            <!-- Dosen -->  
+            <!-- Mahasiswa -->  
             <div class="content" style="padding-top: 70px; padding-left: 100px;">
                 <div class="container">
                     <div class="table-wrapper">
 
-            <h1>Data Dosen</h1>
+            <h1>Data Mahasiswa</h1>
             <hr>
 
             <table id="tablenya" border="1" cellpadding="7">

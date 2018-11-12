@@ -12,7 +12,7 @@ class C_login extends CI_Controller {
 	public function getlogin(){
 		if($this->model_login->getlogin($this->input->post('username'),$this->input->post('password'))){
 			$data = $this->model_login->selectByUsername($this->input->post('username'))->row_array();
-
+ 
 			$userdata = array(
 				'id_usernama'=>$data['id_usernama'],
 				'username'=>$data['username'],
@@ -26,8 +26,7 @@ class C_login extends CI_Controller {
 		}
 	}
 	public function logout(){
-		$this->session->session_destroy();
+		$this->session->sess_destroy();
 		redirect('C_login');
 	}
-
 }
