@@ -9,9 +9,9 @@ class C_Mahasiswa extends CI_Controller {
 	}
 	
 	public function index(){
-		$datamahasiswa['Mahasiswa'] = $this->M_Mahasiswa->view();
+		$datamahasiswa['mahasiswa'] = $this->M_Mahasiswa->view();
 		$this->load->view('./header');
-		$this->load->view('Mahasiswa/index', $datamahasiswa);
+		$this->load->view('mahasiswa/index', $datamahasiswa);
 		$this->load->view('./footer');	
 	}
 	
@@ -23,14 +23,14 @@ class C_Mahasiswa extends CI_Controller {
 			}
 		}
 		$this->load->view('./header');
-		$this->load->view('Mahasiswa/form_tambah');
+		$this->load->view('mahasiswa/form_tambah');
 		$this->load->view('./footer');	
 	}
 
 	public function Mahasiswa_ubah(){
-		$datamahasiswa['Mahasiswa'] = $this->M_Mahasiswa->view();
+		$datamahasiswa['mahasiswa'] = $this->M_Mahasiswa->view();
 		$this->load->view('./header');
-		$this->load->view('Mahasiswa/v_Mahasiswa_ubah', $datamahasiswa);
+		$this->load->view('mahasiswa/v_mahasiswa_ubah', $datamahasiswa);
 		$this->load->view('./footer');	
 	}
 	
@@ -42,9 +42,9 @@ class C_Mahasiswa extends CI_Controller {
 			}
 		}
 		
-		$datamahasiswa['Mahasiswa'] = $this->M_Mahasiswa->view_by($nim);
+		$datamahasiswa['mahasiswa'] = $this->M_Mahasiswa->view_by($nim);
 		$this->load->view('./header');
-		$this->load->view('Mahasiswa/form_ubah', $datamahasiswa);
+		$this->load->view('mahasiswa/form_ubah', $datamahasiswa);
 		$this->load->view('./footer');	
 	}
 	
